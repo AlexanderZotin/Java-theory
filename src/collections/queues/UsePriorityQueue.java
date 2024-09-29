@@ -14,18 +14,18 @@ PriorityQueue - очередь с приоритетом. Приоретет о�
 public class UsePriorityQueue {
 
     public static void main(String [] args) {
-	    Queue<String> queue = new PriorityQueue<>();
-		queue.offer("Маша");
-		queue.offer("Кролик");
-		queue.offer("Бобоська");
-		queue.offer("Бубарка");
-		queue.offer("Кошка Лемми");
-		queue.offer("Львёнок Шура");
-		queue.offer("Зублик");
-		queue.offer("Цыпа");
-		queue.offer("Пёс Собачий");
-		CashRegister cashRegister = new CashRegister(queue);
-		cashRegister.open();
+        Queue<String> queue = new PriorityQueue<>();
+        queue.offer("Маша");
+        queue.offer("Кролик");
+        queue.offer("Бобоська");
+        queue.offer("Бубарка");
+        queue.offer("Кошка Лемми");
+        queue.offer("Львёнок Шура");
+        queue.offer("Зублик");
+        queue.offer("Цыпа");
+        queue.offer("Пёс Собачий");
+        CashRegister cashRegister = new CashRegister(queue);
+        cashRegister.open();
     }
 
 }

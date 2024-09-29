@@ -17,7 +17,7 @@ public abstract class Animal {
   
     public Animal(String color){
         System.out.println("Конструктор, принимающий на вход строку, запущен!");
-	    this.setColor(color);
+        this.setColor(color);
     }
   
     /*
@@ -30,10 +30,10 @@ public abstract class Animal {
 
     public void setColor(String color){
         if(color.isEmpty()){
-	        System.out.println("Ошибка! Цвет не может быть пустым!");
-	    }  else {
+            System.out.println("Ошибка! Цвет не может быть пустым!");
+        }  else {
             this.color = color;
-	    }
+        }
     }
   
     //А это абстрактный метод. У него нет тела и он помечается словом abstract.

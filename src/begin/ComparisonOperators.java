@@ -20,15 +20,15 @@ public class ComparisonOperators {
 
         String string1 = "Привет!";
         String string2 = "Пока!";
-	    boolean isEqual = string1.equals(string2); //Строки сравниваются только так, а не с помощью "==" !!!
-	 
-	    //Выводим результаты на экран
+        boolean isEqual = string1.equals(string2); //Строки сравниваются только так, а не с помощью "==" !!!
+     
+        //Выводим результаты на экран
         System.out.println(number1 + "=" + number2 +" - " + check1);
         System.out.println(number1 + " не равно " + number2 +" - " + check2);
         System.out.println(number1 + ">" + number2 +" - " + check3);
         System.out.println(number1 + "<" + number2 +" - " + check4);
         System.out.println(number1 + " больше или равно " + number2 +" - " + check5);
         System.out.println(number1 + " меньше или равно " + number2 +" - " + check6);
-	    System.out.println("Строка " + string1 + " и строка " + string2 + " одинаковы - " + isEqual);
+        System.out.println("Строка " + string1 + " и строка " + string2 + " одинаковы - " + isEqual);
     }
 }

@@ -12,18 +12,18 @@ NavigableMap, что говорит о том, что элементы в это
 public class UseTreeMap {
 
     public static void main(String [] args) {
-        NavigableMap<Long, String> map = new TreeMap<>();		
-		map.put(89657346253L, "Банджю");
-		map.put(89653738481L, "Ватя");
-		map.put(89653734334L, "Монстриго");
-		map.put(89652387389L, "Кабаноид");
-		map.put(89653267327L, "Ушастик");
-		map.put(88932478321L, "Ушапусик");
-		map.put(89653738310L, "Ушаноид");
-		TelephoneBook tBook = new TelephoneBook(map);
-		tBook.open();
-		tBook.printFacts();
-		tBook.aboutNumbers();
+        NavigableMap<Long, String> map = new TreeMap<>();        
+        map.put(89657346253L, "Банджю");
+        map.put(89653738481L, "Ватя");
+        map.put(89653734334L, "Монстриго");
+        map.put(89652387389L, "Кабаноид");
+        map.put(89653267327L, "Ушастик");
+        map.put(88932478321L, "Ушапусик");
+        map.put(89653738310L, "Ушаноид");
+        TelephoneBook tBook = new TelephoneBook(map);
+        tBook.open();
+        tBook.printFacts();
+        tBook.aboutNumbers();
     }
-	
+    
 }

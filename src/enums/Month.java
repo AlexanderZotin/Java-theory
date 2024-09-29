@@ -33,7 +33,7 @@ public enum Month {
     private Month(String translation, int ordinalNumber){
         System.out.println("Конструктор из перечисления запущен!");
         this.ordinalNumber = ordinalNumber;
-	    this.translation = translation;
+        this.translation = translation;
     }
   
     //В перечислениях могут быть свои методы!
@@ -49,7 +49,7 @@ public enum Month {
     @Override
     public String toString(){
         return "Название месяца: " + name() + "; Перевод на русский язык: " + 
-	    translation + "; Порядковый номер месяца: " + ordinalNumber + ";";
+        translation + "; Порядковый номер месяца: " + ordinalNumber + ";";
     }
   
 }

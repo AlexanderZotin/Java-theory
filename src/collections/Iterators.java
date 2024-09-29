@@ -32,39 +32,39 @@ public class Iterators {
 
     public static void main(String [] args) {
         List<Integer> numbers = new ArrayList<>(Arrays.asList(-6, 4, 8, 0, -14, 66, 32, -1, 13));
-		System.out.println("---------------------------------------");
-		System.out.println("Первоначальный список:");
-		for(int i: numbers) {
-		    System.out.println(i);
-		}
-		System.out.println("---------------------------------------");
-		
-		ListIterator<Integer> listIterator = numbers.listIterator();
-		System.out.println("---------------------------------------");
-		while(listIterator.hasNext()){ 
-			if(listIterator.next() < 0) {
-			    listIterator.remove(); 
-				System.out.println("Элемент под индексом " + (listIterator.nextIndex()) + " отрицательный, поэтому был удалён.");
-				listIterator.add((int) Math.round(Math.random() * 10));
-			}
-		}
-		
-		listIterator = numbers.listIterator();
-		System.out.println("---------------------------------------");
-		System.out.println("Исправлены й список:");
-		while(listIterator.hasNext()){
-		    System.out.println(listIterator.next());
-		}
-		System.out.println("---------------------------------------");
-		
-		//А теперь пересоздаём этот итератор и он будет на последнем элементе, так как я указал в параметрах numbers.size()
-		listIterator = numbers.listIterator(numbers.size()); 
-		System.out.println("---------------------------------------");
-		System.out.println("Список наоборот:");
-		while(listIterator.hasPrevious()){
-		    System.out.println(listIterator.previous());
-		}
-		System.out.println("---------------------------------------");
+        System.out.println("---------------------------------------");
+        System.out.println("Первоначальный список:");
+        for(int i: numbers) {
+            System.out.println(i);
+        }
+        System.out.println("---------------------------------------");
+        
+        ListIterator<Integer> listIterator = numbers.listIterator();
+        System.out.println("---------------------------------------");
+        while(listIterator.hasNext()){ 
+            if(listIterator.next() < 0) {
+                listIterator.remove(); 
+                System.out.println("Элемент под индексом " + (listIterator.nextIndex()) + " отрицательный, поэтому был удалён.");
+                listIterator.add((int) Math.round(Math.random() * 10));
+            }
+        }
+        
+        listIterator = numbers.listIterator();
+        System.out.println("---------------------------------------");
+        System.out.println("Исправлены й список:");
+        while(listIterator.hasNext()){
+            System.out.println(listIterator.next());
+        }
+        System.out.println("---------------------------------------");
+        
+        //А теперь пересоздаём этот итератор и он будет на последнем элементе, так как я указал в параметрах numbers.size()
+        listIterator = numbers.listIterator(numbers.size()); 
+        System.out.println("---------------------------------------");
+        System.out.println("Список наоборот:");
+        while(listIterator.hasPrevious()){
+            System.out.println(listIterator.previous());
+        }
+        System.out.println("---------------------------------------");
     }
-	
+    
 }

@@ -31,13 +31,13 @@ public class AbstractClasses {
 
     public static void main (String [] args) {
         Dog dog = new Dog();
-	    dog.setColor("Коричневый");
-	    System.out.println("Цвет собаки dog: " + dog.getColor());
-	    dog.voice();
-	    Cat cat = new Cat("Чёрный");
-	    System.out.println("Изначальный цвет кота cat: " + cat.getColor());
-	    cat.setColor("Белый");
-	    System.out.println("Новый цвет кота cat: " + cat.getColor());
-	    cat.voice();
+        dog.setColor("Коричневый");
+        System.out.println("Цвет собаки dog: " + dog.getColor());
+        dog.voice();
+        Cat cat = new Cat("Чёрный");
+        System.out.println("Изначальный цвет кота cat: " + cat.getColor());
+        cat.setColor("Белый");
+        System.out.println("Новый цвет кота cat: " + cat.getColor());
+        cat.voice();
     }
 }

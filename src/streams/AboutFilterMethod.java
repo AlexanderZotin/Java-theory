@@ -11,26 +11,26 @@ import java.util.stream.Collectors;
 public class AboutFilterMethod {
 
     public static void main(String[] args) {
-	    List<Integer> allNumbers = listOfNumbers();
-		List<Integer> onlyEvenNumbers = allNumbers.stream()
-		        .filter(num -> num % 2 == 0)
-				.collect(Collectors.toList());
-		System.out.println
-		        ("Все чётные числа от " + allNumbers.getFirst() + " до " +
-				allNumbers.getLast() + ": " + onlyEvenNumbers);
+        List<Integer> allNumbers = listOfNumbers();
+        List<Integer> onlyEvenNumbers = allNumbers.stream()
+                .filter(num -> num % 2 == 0)
+                .collect(Collectors.toList());
+        System.out.println
+                ("Все чётные числа от " + allNumbers.getFirst() + " до " +
+                allNumbers.getLast() + ": " + onlyEvenNumbers);
     }
 
-	private static List<Integer> listOfNumbers() {
-	    List<Integer> result = new ArrayList<>();
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Введите первое число в диапазоне:");
-		int firstNumberInRange = scanner.nextInt();
-		System.out.println("Введите второе число в диапазоне:");
-		int secondNumberInRange = scanner.nextInt();
-		result.add(firstNumberInRange);
-		for(int i = firstNumberInRange + 1; i < secondNumberInRange; i++) {
-		    result.add(i);
-		}
-		return result;
-	}
+    private static List<Integer> listOfNumbers() {
+        List<Integer> result = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите первое число в диапазоне:");
+        int firstNumberInRange = scanner.nextInt();
+        System.out.println("Введите второе число в диапазоне:");
+        int secondNumberInRange = scanner.nextInt();
+        result.add(firstNumberInRange);
+        for(int i = firstNumberInRange + 1; i < secondNumberInRange; i++) {
+            result.add(i);
+        }
+        return result;
+    }
 }

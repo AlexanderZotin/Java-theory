@@ -6,7 +6,7 @@ public class Ruler implements java.io.Serializable {
     поле не должно быть сериализованно.
     */
     private transient int id;
-	
+    
     private String color;
     private int longOfRuler;
 
@@ -31,8 +31,8 @@ public class Ruler implements java.io.Serializable {
   
     public Ruler(String color, int longOfRuler, int id){
         this.color = color;
-	    this.longOfRuler = longOfRuler;
-	    this.id = id;
+        this.longOfRuler = longOfRuler;
+        this.id = id;
     }
   
     @Override

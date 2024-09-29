@@ -25,51 +25,51 @@ java.util.Stack - это коллекция, которая наследуетс
 public class UseStack {
 
     public static void main(String [] args) {
-	    UIManager.put("OptionPane.okButtonText", "Далее"); 
-	    UIManager.put("OptionPane.cancelButtonText", "Отмена"); 
+        UIManager.put("OptionPane.okButtonText", "Далее"); 
+        UIManager.put("OptionPane.cancelButtonText", "Отмена"); 
         Stack<Integer> stack = createStack();
-		testStack(stack);
+        testStack(stack);
     }
-	
-	private static Stack<Integer> createStack() {
-	    int size
-				;
-	    while(true) {
-	        String userInput = JOptionPane.showInputDialog(null, "Сколько элементов будет в стеке?",
-		            "Ввод", JOptionPane.QUESTION_MESSAGE);
-			if(userInput == null) System.exit(0);
-			try {
-			    size = Integer.parseInt(userInput);
-				if(size < 0) {  
-				    JOptionPane.showMessageDialog(null, "Стек не может иметь отрицательный размер!", 
-				        "Неверный ввод", JOptionPane.ERROR_MESSAGE);
-					continue;
-				}
-				break;
-			} catch(NumberFormatException e) {
-				JOptionPane.showMessageDialog(null, "Нужно было ввести целое число прописью!", 
-				        "Неверный ввод", JOptionPane.ERROR_MESSAGE);
-			}
-		}
-		Stack<Integer> stack = new Stack<>();
-		for(int i = 1; i <= size; i++) {
-		    stack.push(i);
-		}
-		return stack;
-	}
-	
-	private static void testStack(Stack<?> stack) {
-	    if(stack == null) throw new IllegalArgumentException("Параметр stack не должен быть null!");
-		while(true) { 
-		    if(stack.empty()) {
-			    JOptionPane.showMessageDialog(null, "Стек пуст!", "Прохождение по стеку",
-		            JOptionPane.INFORMATION_MESSAGE);
-				break;
-			}
-			JOptionPane.showMessageDialog(null, 
-			        "Стек: " + stack + "; Верхний элемент: " + stack.pop(), 
-			        "Прохождение по стеку",
-					JOptionPane.INFORMATION_MESSAGE);
-		}
-	}
+    
+    private static Stack<Integer> createStack() {
+        int size
+                ;
+        while(true) {
+            String userInput = JOptionPane.showInputDialog(null, "Сколько элементов будет в стеке?",
+                    "Ввод", JOptionPane.QUESTION_MESSAGE);
+            if(userInput == null) System.exit(0);
+            try {
+                size = Integer.parseInt(userInput);
+                if(size < 0) {  
+                    JOptionPane.showMessageDialog(null, "Стек не может иметь отрицательный размер!", 
+                        "Неверный ввод", JOptionPane.ERROR_MESSAGE);
+                    continue;
+                }
+                break;
+            } catch(NumberFormatException e) {
+                JOptionPane.showMessageDialog(null, "Нужно было ввести целое число прописью!", 
+                        "Неверный ввод", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+        Stack<Integer> stack = new Stack<>();
+        for(int i = 1; i <= size; i++) {
+            stack.push(i);
+        }
+        return stack;
+    }
+    
+    private static void testStack(Stack<?> stack) {
+        if(stack == null) throw new IllegalArgumentException("Параметр stack не должен быть null!");
+        while(true) { 
+            if(stack.empty()) {
+                JOptionPane.showMessageDialog(null, "Стек пуст!", "Прохождение по стеку",
+                    JOptionPane.INFORMATION_MESSAGE);
+                break;
+            }
+            JOptionPane.showMessageDialog(null, 
+                    "Стек: " + stack + "; Верхний элемент: " + stack.pop(), 
+                    "Прохождение по стеку",
+                    JOptionPane.INFORMATION_MESSAGE);
+        }
+    }
 }

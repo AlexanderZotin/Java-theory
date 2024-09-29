@@ -21,14 +21,14 @@ Queue - очередь. Работает по принципу FIFO (first in, f
 public class UseLinkedListAsQueue {
 
     public static void main(String [] args) {
-	    Queue<String> queue = new LinkedList<>(); 
-		queue.offer("Таракан Сбегучка");
-		queue.offer("Таракан Большой");
-		queue.offer("Тараканиха Светлая");
-		queue.offer("Тараканиха Чебурашка");
-		queue.offer("Таракан Оторванный");
-	    CashRegister cashRegister = new CashRegister(queue);
-		cashRegister.open();
+        Queue<String> queue = new LinkedList<>(); 
+        queue.offer("Таракан Сбегучка");
+        queue.offer("Таракан Большой");
+        queue.offer("Тараканиха Светлая");
+        queue.offer("Тараканиха Чебурашка");
+        queue.offer("Таракан Оторванный");
+        CashRegister cashRegister = new CashRegister(queue);
+        cashRegister.open();
     }
 
 }

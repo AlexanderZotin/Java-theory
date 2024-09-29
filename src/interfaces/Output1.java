@@ -12,14 +12,14 @@ public class Output1 implements Information { //Интерфейсы implements,
     public void printLine(){
         System.out.println("Введите что-нибудь: ");
         Scanner scanner = new Scanner(System.in,"Cp866");
-	    System.out.println("Вы ввели: " + scanner.nextLine());
+        System.out.println("Вы ввели: " + scanner.nextLine());
     }
   
     @Override
     public void printNumber(){
         System.out.println("Введите число: ");
         Scanner scanner = new Scanner(System.in,"Cp866");
-	    System.out.println("Вы ввели: " + scanner.nextInt()); 
+        System.out.println("Вы ввели: " + scanner.nextInt()); 
     }
 
 }

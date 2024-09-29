@@ -12,11 +12,11 @@ public class NestedClasses {
 
     public static void main (String [] args) {
         System.out.println();
-	    ElectroCar car = new ElectroCar(12345);
-	    //Так создаётся экземпляр статического вложенного класса
-	    ElectroCar.Battery battery = new ElectroCar.Battery(); 
-	    battery.check();
-	    car.gas();
-	    car.brake();
+        ElectroCar car = new ElectroCar(12345);
+        //Так создаётся экземпляр статического вложенного класса
+        ElectroCar.Battery battery = new ElectroCar.Battery(); 
+        battery.check();
+        car.gas();
+        car.brake();
     }
 }

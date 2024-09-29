@@ -12,11 +12,11 @@ Set - множество. HashSet - одна из самых популярны�
 public class UseHashSet {
 
     public static void main(String [] args) {
-	    Set<String> set = new HashSet<>();
-		set.add("Творог");
-		set.add("Молоко");
-		set.add("Конфеты \"Костёр\"");
-		BuyPlan plan = new BuyPlan(set);
-		plan.open();
+        Set<String> set = new HashSet<>();
+        set.add("Творог");
+        set.add("Молоко");
+        set.add("Конфеты \"Костёр\"");
+        BuyPlan plan = new BuyPlan(set);
+        plan.open();
     }
 }

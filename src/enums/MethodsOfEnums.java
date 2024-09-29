@@ -39,33 +39,33 @@ public class MethodsOfEnums {
 
     public static void main(String [] args){ 
         System.out.println("--------------------------------------------------------");
-	    int index = (int) Math.round(Math.random() * 10);
-	    Month[] monthes = Month.values();
-	    Month month = monthes[index];
+        int index = (int) Math.round(Math.random() * 10);
+        Month[] monthes = Month.values();
+        Month month = monthes[index];
         askAboutMonth(month);
     }
   
     private static void askAboutMonth(Month month){
         Scanner scanner = new Scanner(System.in);
         while(true){
-	        System.out.println("--------------------------------------------------------");
-	        System.out.println("Как будет по-английски " + month.getTranslation() + "?");
-	        String userInput = scanner.nextLine();
-		    try {
-	            Month userMonth = Month.valueOf(userInput);
-			    if(userMonth.equals(month)){
-			        System.out.println("Верно! " + month.getTranslation() + 
-				    " по-английски будет " + month.name() +
-				    ". Его порядковый номер - " + month.ordinal() + ".");
+            System.out.println("--------------------------------------------------------");
+            System.out.println("Как будет по-английски " + month.getTranslation() + "?");
+            String userInput = scanner.nextLine();
+            try {
+                Month userMonth = Month.valueOf(userInput);
+                if(userMonth.equals(month)){
+                    System.out.println("Верно! " + month.getTranslation() + 
+                    " по-английски будет " + month.name() +
+                    ". Его порядковый номер - " + month.ordinal() + ".");
                     break;
-			    } else {
-			        System.err.println("Неверно! " + userMonth.name() + " - это не " + month.getTranslation() + ".");
-			    }
-		    } catch (IllegalArgumentException e){
-		        System.err.println("Вы не ввели название месяца на английском языке!");
-		    }
-	    }
-	    System.out.println("--------------------------------------------------------");
+                } else {
+                    System.err.println("Неверно! " + userMonth.name() + " - это не " + month.getTranslation() + ".");
+                }
+            } catch (IllegalArgumentException e){
+                System.err.println("Вы не ввели название месяца на английском языке!");
+            }
+        }
+        System.out.println("--------------------------------------------------------");
     } 
   
 }

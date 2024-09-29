@@ -8,8 +8,8 @@ public class Cat extends Animal { //Создаём класс Cat, которы�
     }
    
     public void printWeight() {
-	    System.out.println("Возраст кота: " + weight);
-	    //Поле weight унаследовано из класса Animal
+        System.out.println("Возраст кота: " + weight);
+        //Поле weight унаследовано из класса Animal
     }
    
 }

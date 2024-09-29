@@ -12,17 +12,17 @@ import java.util.Arrays;
 public class AboutDistinctAndCountMethods { 
 
     public static void main(String[] args) {
-	    int[] array = {2, 4, 5, -2, 5, 77, 4, -3, 5, -2, 4, 67, -8, 0, 5, 7, 8, 9, -10, 45, 67, 54};
-		System.out.println("Есть массив: " + Arrays.toString(array));
-		//-----------------------------Пример 1 на distinct() и count()-----------------------------
-		long distinctElements = Arrays.stream(array).distinct().count();
-		System.out.println("Сколько в нём уникальных элементов? " + distinctElements);
-		//-----------------------------Пример 2 на filter() и count()-------------------------------
-		long positiveElements = Arrays.stream(array).filter(arg -> arg > 0).count();
-		System.out.println("Сколько в нём положительных элементов?  " + positiveElements);
-		//-----------------------------Пример 3 на filter() и count()-------------------------------
-		long countOfPrimeRoots = Arrays.stream(array).filter(arg -> Math.sqrt(arg) % 1 == 0).count();
-		System.out.println("Сколько в нём чисел, из которых легко вычисляется корень? " + countOfPrimeRoots);
+        int[] array = {2, 4, 5, -2, 5, 77, 4, -3, 5, -2, 4, 67, -8, 0, 5, 7, 8, 9, -10, 45, 67, 54};
+        System.out.println("Есть массив: " + Arrays.toString(array));
+        //-----------------------------Пример 1 на distinct() и count()-----------------------------
+        long distinctElements = Arrays.stream(array).distinct().count();
+        System.out.println("Сколько в нём уникальных элементов? " + distinctElements);
+        //-----------------------------Пример 2 на filter() и count()-------------------------------
+        long positiveElements = Arrays.stream(array).filter(arg -> arg > 0).count();
+        System.out.println("Сколько в нём положительных элементов?  " + positiveElements);
+        //-----------------------------Пример 3 на filter() и count()-------------------------------
+        long countOfPrimeRoots = Arrays.stream(array).filter(arg -> Math.sqrt(arg) % 1 == 0).count();
+        System.out.println("Сколько в нём чисел, из которых легко вычисляется корень? " + countOfPrimeRoots);
     }
 
 }

@@ -10,19 +10,19 @@ public class ReturningMethods {
 
     public static void main (String [] args) {
         Return returnNum = new Return(); //Создаём объект returnNumber1 со ссылкой на класс Return
-	    //Получаем значения из методов
-	    System.out.println("Введите первое число: "); //Просим пользователя ввести первое число
+        //Получаем значения из методов
+        System.out.println("Введите первое число: "); //Просим пользователя ввести первое число
         double number1 =  returnNum.returnNumber();
-        System.out.println("Введите второе число: "); //Просим пользователя ввести второе число	 
+        System.out.println("Введите второе число: "); //Просим пользователя ввести второе число     
         double number2 =  returnNum.returnNumber(); 
-	 
-	    //Производим расчёты
-	    double resultOfAddition = number1 + number2;
+     
+        //Производим расчёты
+        double resultOfAddition = number1 + number2;
         double resultOfSubtraction = number1 - number2;
         double resultOfMultiplication = number1 * number2;
         double resultOfDivision = number1 / number2;
         double resultOfDivisionByModulus = number1 % number2; 
-	 
+     
         //Выводим результаты на экран
         System.out.println(number1 +" + "+ number2 +" = " + resultOfAddition);
         System.out.println(number1 +" - "+ number2 +" = " + resultOfSubtraction);

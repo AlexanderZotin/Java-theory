@@ -32,41 +32,41 @@ public class HandlingOfExceptions {
     public static void main (String [] args) {
         System.out.println();
         System.out.println("Вызывается метод readFile1(): ");
-	    HandlingOfExceptions handlingOfExceptions = new HandlingOfExceptions();
+        HandlingOfExceptions handlingOfExceptions = new HandlingOfExceptions();
         handlingOfExceptions.readFile();
     }
  
     public void readFile(){
         String separator = File.separator;
-	    System.out.println();
+        System.out.println();
         File file = new File("D:" + separator + "codes" + separator + "theory" + separator + 
-	    "exceptions" + separator + "test.txt");
-	 
-	    try{
-	        /*
-	        В блок try помещается тот код, который может вызвать исключение.
+        "exceptions" + separator + "test.txt");
+
+        try{
+            /*
+            В блок try помещается тот код, который может вызвать исключение.
             Если оно произошло, то программа автоматически переходит в блок catch, даже
-	        не заканчивая выполнять блок try.
-	        */  
+            не заканчивая выполнять блок try.
+            */
             Scanner scanner = new Scanner(file);
-	        while(scanner.hasNextLine()){
-	            System.out.println(scanner.nextLine());
-	        }
-	        System.out.println("Чтение файла прошло успешно!");
-		    scanner.close();
-	    } catch(FileNotFoundException exception){
-	        /*
-		    В блок catch программа перепрыгивает, если в блоке try произошло исключение.
-		    Если же нет, то блок catch не выполнится.
-		    */
-	        System.err.println("Ошибка! Файл не найден!");
-	    } finally {
-	        /*
-		    Блок finally не обязателен, в отличие от блока try и блока catch.
-		    Выполняется вне зависимости от того, произошло исключение или нет.
-		    */
-		    System.out.println("Исполнение метода закончено!");
-	    }
+            while(scanner.hasNextLine()){
+                System.out.println(scanner.nextLine());
+            }
+            System.out.println("Чтение файла прошло успешно!");
+            scanner.close();
+        } catch(FileNotFoundException exception){
+            /*
+            В блок catch программа перепрыгивает, если в блоке try произошло исключение.
+            Если же нет, то блок catch не выполнится.
+            */
+            System.err.println("Ошибка! Файл не найден!");
+        } finally {
+            /*
+            Блок finally не обязателен, в отличие от блока try и блока catch.
+            Выполняется вне зависимости от того, произошло исключение или нет.
+            */
+            System.out.println("Исполнение метода закончено!");
+        }
     }
   
 }

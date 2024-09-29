@@ -6,7 +6,7 @@ public class Variables implements java.io.Serializable {
   
     public Variables(int number, String string) {
         this.number = number;
-	    this.string = string;
+        this.string = string;
     }
   
     @Override

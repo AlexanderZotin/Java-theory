@@ -19,44 +19,44 @@ public class CreatingYourOwnException {
     public static void main (String [] args) {
         System.out.println();
         System.out.println("Вызывается метод inputNumber():");
-	    try{
-	        inputNumber();
-        } catch (IOException exception){
-	        System.err.println(exception.getMessage());
-	    }
         try{
-	        System.out.println();
-	        System.out.println("Вызывается метод inputPassword(): ");
-	        inputPassword();	 
-	    } catch(IncorrectPasswordException exception){
-	        System.err.println(exception.getMessage());
-	    }
+            inputNumber();
+        } catch (IOException exception){
+            System.err.println(exception.getMessage());
+        }
+        try{
+            System.out.println();
+            System.out.println("Вызывается метод inputPassword(): ");
+            inputPassword();     
+        } catch(IncorrectPasswordException exception){
+            System.err.println(exception.getMessage());
+        }
     }
 
     public static void inputNumber() throws IOException { 
         //В сигнатуре метода указываем, что метод может выкинуть исключение
-	 
+     
         Scanner scanner = new Scanner(System.in);
-	    System.out.println("Введите положительное число:");
-	    int number = scanner.nextInt();
+        System.out.println("Введите положительное число:");
+        int number = scanner.nextInt();
         if(number < 0){
-	        //Выбрасываем java-исключение из пакета java.io
-	        throw new IOException("Введено отрицательное число");
-	    } else {
-	        System.out.println("Спасибо, что ввели правильное число!");
-	    }
+            //Выбрасываем java-исключение из пакета java.io
+            throw new IOException("Введено отрицательное число");
+        } else {
+            System.out.println("Спасибо, что ввели правильное число!");
+        }
     }
 
     public static void inputPassword() throws IncorrectPasswordException {
         Scanner scanner = new Scanner(System.in);
-	    System.out.println("Введите ваш пароль: ");
+        System.out.println("Введите ваш пароль: ");
         String password = scanner.nextLine();
-	    if(password.equals("12345")){
-            System.out.println("Ура! Вы ввели верный пароль!");	 
-	    } else {
-	        //Выбрасываем собственное исключение с сообщением.
-	        throw new IncorrectPasswordException("Пользователь ввёл неверный пароль");
-	    }
+        if(password.equals("12345")){
+            System.out.println("Ура! Вы ввели верный пароль!");     
+        } else {
+            //Выбрасываем собственное исключение с сообщением.
+            throw new IncorrectPasswordException("Пользователь ввёл неверный пароль");
+        }
     }
 
 }

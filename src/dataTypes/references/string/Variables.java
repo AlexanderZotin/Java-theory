@@ -6,7 +6,7 @@ public class Variables {
   
     public Variables(int number, char symbol){
         this.number = number;
-	    this.symbol = symbol;
+        this.symbol = symbol;
     }
   
     @Override
@@ -15,7 +15,7 @@ public class Variables {
         if(this == obj) return true;
         if(this.getClass() != obj.getClass()) return false;
         Variables otherVariables = (Variables) obj; //применяем нисходящее преобразование
-		//Сравниваем поля объектов
+        //Сравниваем поля объектов
         return this.number == otherVariables.number && this.symbol == otherVariables.symbol; 
     }
   

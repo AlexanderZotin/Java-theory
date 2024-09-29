@@ -12,22 +12,22 @@ import java.math.BigDecimal;
 public class AboutNumbersWithFloatingPoint {
 
     public static void main(String [] args) {
-	    double first = 0.1;
-	    double second = 0.2;
-		double sum = first + second;
-		//Выведет не 0.3, а 0.30000000000000004
-		System.out.println("\nРезультат сложения чисел при использовании типа double: " + sum);
-		
-		/*
-		В конструктор нужно подавать строку! В BigDecimal есть и конструктор, который принимает
-		double, но если подать в него 0.1, то возникнет та же проблема...
-		Ну и если подать число со слишком большой дробной частью (или просто слишком большое число),
-		то часть её потеряется.
-		*/
-		BigDecimal b1 = new BigDecimal("0.1");       
-		BigDecimal b2 = new BigDecimal("0.2");       
+        double first = 0.1;
+        double second = 0.2;
+        double sum = first + second;
+        //Выведет не 0.3, а 0.30000000000000004
+        System.out.println("\nРезультат сложения чисел при использовании типа double: " + sum);
+        
+        /*
+        В конструктор нужно подавать строку! В BigDecimal есть и конструктор, который принимает
+        double, но если подать в него 0.1, то возникнет та же проблема...
+        Ну и если подать число со слишком большой дробной частью (или просто слишком большое число),
+        то часть её потеряется.
+        */
+        BigDecimal b1 = new BigDecimal("0.1");       
+        BigDecimal b2 = new BigDecimal("0.2");       
         b1 = b1.add(b2); //BigDecimal - неизменяемый класс
-		//Выведет 0,3. ≈сли не передать в конструктор double »ли float :)
+        //Выведет 0,3. ≈сли не передать в конструктор double »ли float :)
         System.out.println("Результат сложения чисел при использовании класса BigDecimal: " + b1);
     }
 

@@ -4,11 +4,11 @@ public class LittleMoreAboutInterfaces implements Swimmable{
 
     public static void main(String [] args){ 
         DataPrinter printer = new DataPrinter();
-	    printer.print();
-	    LittleMoreAboutInterfaces littleMore = new LittleMoreAboutInterfaces(); 
-	    littleMore.swim();	
-	    littleMore.makeSound();	
-	    littleMore.move();
+        printer.print();
+        LittleMoreAboutInterfaces littleMore = new LittleMoreAboutInterfaces(); 
+        littleMore.swim();    
+        littleMore.makeSound();    
+        littleMore.move();
     }
 
     /*
